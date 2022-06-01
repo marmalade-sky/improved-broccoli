@@ -7,8 +7,7 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 author: Nichole
 date: 2022-06-01T21:16:10.242Z
 tags:
-  - post
-  - featured
+  - reviews
 image: /assets/reviews/th-1885839158.jpg
 imageAlt: Some tasty beer!
 ---
