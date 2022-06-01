@@ -1,5 +1,7 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/assets/');
+  eleventyConfig.addPassthroughCopy('./src/admin');
+
   eleventyConfig.addWatchTarget("./src/css/");
 
   // eleventyConfig.addCollection("navigation", function (collection) {
