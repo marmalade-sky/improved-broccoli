@@ -4,3 +4,17 @@ layout: base.njk
 ---
 
 Hello beer world!
+<div class="grid grid-cols-2">    
+  {% for review in collections.reviews %}
+    <div>
+      {{review.data.title}}
+      {{review.data.description}}
+      {{review.data.author}}
+      {{review.data.date}}
+      {{review.data.tags}}
+      {{review.data.image}}
+      {{review.data.imgAlt}}
+      {{review.data.body}}
+    </div>
+  {% endfor %}
+</div>
