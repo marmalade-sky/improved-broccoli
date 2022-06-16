@@ -13,9 +13,15 @@ module.exports = function (eleventyConfig) {
     });
   });
 
-  eleventyConfig.addCollection('latestLove', function (collection) {
+  eleventyConfig.addCollection('highRated', function (collection) {
     return collection.getFilteredByGlob('./src/reviews/*.md')
     .filter(review => review.data.rating > 8)
+    .sort((a, b) => {return b.date - a.date;})
+  });
+
+  eleventyConfig.addCollection('gotoStyles', function (collection) {
+    return collection.getFilteredByGlob('./src/styles/*.md')
+    .filter(style => style.data.gotoStyle === true)
   });
 
   eleventyConfig.addFilter('filterStyle', (item, beerGroups) => {
