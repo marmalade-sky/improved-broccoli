@@ -1,0 +1,22 @@
+{% for review in collections.reviews | filterStyle(styleGroup) %}
+  <div class="flex items-center gap-6">
+    <div class="relative w-28 h-28 overflow-hidden rounded shadow-md ">
+      <img src="assets/img/beer-thumb.jpg" class="absolute top-0 left-1/2 -translate-x-1/2 max-w-none h-full" alt="" />
+    </div>
+    <div class="flex-1">
+      <h4 class="text-2xl">
+        {{review.data.beer}}
+      </h4>
+      <p class="flex flex-col text-base text-gray-600 mb-1">
+        <span>
+          {{review.data.brewery}}
+        </span>
+        <span>
+          {{review.data.breweryLocation}}
+        </span>
+      </p>
+      {%- from 'macros/star-rating.njk' import rating %}
+      {{ rating(review.data.rating) }} 
+    </div>
+  </div>
+{% endfor %}

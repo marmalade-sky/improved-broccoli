@@ -1,8 +1,8 @@
 backend:
   name: git-gateway
   branch: main
-media_folder: "public/assets/reviews"
-public_folder: "/assets/reviews"
+media_folder: "public/assets/img/reviews"
+public_folder: "/assets/img/reviews"
 collections:
   - name: "reviews"
     label: "Beer Reviews"

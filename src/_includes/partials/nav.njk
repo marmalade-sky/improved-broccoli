@@ -1,0 +1,7 @@
+<ul class="flex justify-end gap-16">
+  {% for item in collections.navigation %}
+    <li>
+      <a href="{{item.url | url}}" class="relative lowercase">{{item.data.title}}</a>
+    </li>
+  {% endfor %}
+</ul>

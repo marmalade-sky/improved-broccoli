@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --gutter-slim: 3%;
+    --gutter: 9%;
+    --gutter-wide: 20%;
+    --heading-height: 120px;
+  }
+
+  body {
+    @apply font-primary leading-6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold font-secondary leading-4;
+  }
+
+  .rendering-smooth {
+    image-rendering: smooth;
+  }
+}
+
+@layer components {
+  .hero::before {
+    @apply content-[''] absolute w-full h-full bg-black opacity-30;
+  }
+
+    /* Button style */
+
+    .btn {
+      @apply inline-flex items-center gap-1 py-3 px-5 rounded text-xs font-bold uppercase tracking-widest bg-cyan-600 text-white;
+    }
+  
+    .btn:disabled {
+      @apply bg-slate-200 border-0 text-slate-500;
+    }
+}

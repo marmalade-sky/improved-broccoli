@@ -1,0 +1,14 @@
+{% for style in collections.styles %}
+  <div class="mb-12">
+    <h3 class="text-4xl text-gray-600 mb-3">
+      {{style.data.title}}
+    </h3>
+    <p class="w-3/4 text-lg mb-6">
+    {{style.templateContent | striptags}}
+    </p>
+    <div class="grid grid-cols-3 gap-6">
+      {% set styleGroup = style.data.type %}
+      {% include "partials/beer-snippet.njk" %}
+    </div>
+  </div>
+{% endfor %}

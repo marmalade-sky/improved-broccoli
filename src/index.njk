@@ -1,20 +1,16 @@
 ---
-title: My Beer Site!
-layout: base.njk
+title: Liquid Love
+layout: layouts/base.njk
 ---
-
-Hello beer world!
-<div class="grid grid-cols-2">    
-  {% for review in collections.reviews %}
-    <div>
-      {{review.data.title}}
-      {{review.data.description}}
-      {{review.data.author}}
-      {{review.data.date}}
-      {{review.data.tags}}
-      {{review.data.image}}
-      {{review.data.imgAlt}}
-      {{review.data.body}}
-    </div>
-  {% endfor %}
+{% include "partials/hero.njk" %}
+<div class="grid grid-cols-section bg-gray-100">
+  <div class="col-start-2 col-span-1 py-16">
+    {% include "areas/buy-again.njk" %}
+  </div>
+</div>
+<div class="grid grid-cols-section bg-gray-200">
+  <div class="col-start-2 col-span-1 py-16">
+    <h2 class="text-5xl mb-12">Go•to favorite styles</h2>
+    {% include "areas/beer-styles.njk" %}
+  </div>
 </div>
