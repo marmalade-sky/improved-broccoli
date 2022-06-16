@@ -6,6 +6,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addGlobalData("svgSrc", "/assets/svg/");
   eleventyConfig.addGlobalData("imgSrc", "/assets/img/");
+  eleventyConfig.addGlobalData("reviewImgSrc", "/assets/img/reviews/");
 
   eleventyConfig.addCollection("navigation", function (collection) {
     return collection.getFilteredByTag("pages").sort((a, b) => {
@@ -39,10 +40,6 @@ module.exports = function (eleventyConfig) {
       }
     };
     return review;
-    
-    // Old fragile filter method
-    // let beerFilter = item.filter(i => i.data.style.toString().toLowerCase().includes(style));
-    // return beerFilter;
   });
 
   return {

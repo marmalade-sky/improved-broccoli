@@ -1,6 +1,6 @@
 {% for review in collections.highRated.slice(1,4) %}
   <div class="bg-white shadow-md rounded overflow-hidden">
-    <img src="assets/img/beer-thumb.jpg" alt="">
+    <img src="{{reviewImgSrc}}{{review.data.img}}" alt="">
     <div class="p-6">
       <div class="mb-4 space-y-2">
         <h3 class="text-4xl">{{review.data.beer}}</h3>
