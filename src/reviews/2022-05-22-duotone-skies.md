@@ -7,6 +7,8 @@ abv: 6.8%
 style:
   - IPA
   - imperial IPA
+  - juicy
+  - hazy
   - kolsch
 hops:
   - Citra

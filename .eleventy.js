@@ -18,11 +18,25 @@ module.exports = function (eleventyConfig) {
     .filter(review => review.data.rating > 8)
   });
 
-  eleventyConfig.addFilter('filterStyle', (item, style) => {
-    let itemStyle = item.map(i => i.data.style);
-    let beerFilter = item.filter(i => i.data.style.toString().toLowerCase().includes(style));
-    console.log(style, itemStyle)
-    return beerFilter;
+  eleventyConfig.addFilter('filterStyle', (item, beerGroups) => {
+    let review = [];
+    for (i in item) {
+      let beerStyles = item[i].data.style;
+      for (style in beerStyles) {
+        let beerStyle = beerStyles[style].toLowerCase();
+        for (group in beerGroups) {
+          let beerGroup = beerGroups[group].toLowerCase();
+          if (beerStyle === beerGroup && review.indexOf(item[i]) === -1) {
+            review.push(item[i])
+          }
+        }
+      }
+    };
+    return review;
+    
+    // Old fragile filter method
+    // let beerFilter = item.filter(i => i.data.style.toString().toLowerCase().includes(style));
+    // return beerFilter;
   });
 
   return {
