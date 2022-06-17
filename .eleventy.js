@@ -16,15 +16,23 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  eleventyConfig.addCollection('breweries', function (collection) {
+    return collection.getFilteredByGlob('./src/locations/breweries/*.md');
+  });
+  
+  eleventyConfig.addCollection('shops', function (collection) {
+    return collection.getFilteredByGlob('./src/locations/shops/*.md');
+  });
+
   eleventyConfig.addCollection('highRated', function (collection) {
     return collection.getFilteredByGlob('./src/reviews/*.md')
     .filter(review => review.data.rating > 8)
-    .sort((a, b) => {return b.date - a.date;})
+    .sort((a, b) => {return b.date - a.date;});
   });
 
   eleventyConfig.addCollection('gotoStyles', function (collection) {
     return collection.getFilteredByGlob('./src/styles/*.md')
-    .filter(style => style.data.gotoStyle === true)
+    .filter(style => style.data.gotoStyle === true);
   });
 
   eleventyConfig.addFilter('filterStyle', (item, beerGroups) => {

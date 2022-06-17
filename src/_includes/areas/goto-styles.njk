@@ -1,12 +1,13 @@
+<h2 class="text-4xl mb-6 md:text-5xl md:mb-12">Go•to favorite styles</h2>
 {% for style in collections.gotoStyles %}
   <div class="mb-12 last:mb-0">
     <h3 class="text-3xl text-gray-600 mb-3 md:text-4xl">
       {{style.data.title}}
     </h3>
-    <p class="w-full text-lg mb-6 md:w-3/4">
+    <p class="w-full text-lg mb-6 lg:w-3/4">
     {{style.templateContent | striptags}}
     </p>
-    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
       {% set styleGroup = style.data.type %}
       {% include "partials/beer-snippet.njk" %}
     </div>

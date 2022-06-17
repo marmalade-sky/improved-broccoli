@@ -1,11 +1,17 @@
-{% for review in collections.highRated.slice(1,4) %}
+{% for review in collection %}
   <div class="bg-white shadow-md rounded overflow-hidden">
     <div class="h-48 overflow-hidden md:h-auto">
-      <img src="{{reviewImgSrc}}{{review.data.img}}" alt="Beer pictured: {{review.data.title}}">
+      <a href="{{review.url}}">
+        <img src="{{reviewImgSrc}}{{review.data.img}}" alt="Beer pictured: {{review.data.title}}">
+      </a>
     </div>
     <div class="p-6">
       <div class="mb-4 space-y-2">
-        <h3 class="text-4xl">{{review.data.beer}}</h3>
+        <h3 class="text-4xl">
+          <a href="{{review.url}}">
+            {{review.data.beer}}
+          </a>
+        </h3>
         <p class="flex flex-col text-base text-gray-600">
           <span>{{review.data.brewery}}</span>
           <span>{{review.data.breweryLocation}}</span>

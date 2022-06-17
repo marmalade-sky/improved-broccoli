@@ -16,7 +16,7 @@ module.exports = {
         'section': 'var(--gutter) 1fr var(--gutter)',
         'section-slim': 'var(--gutter-slim) 1fr var(--gutter-slim)',
         'nav': 'var(--gutter) repeat(2, 1fr) var(--gutter)',
-        'nav-slim': 'var(--gutter-slim) repeat(2, 1fr) var(--gutter-slim)',
+        'nav-slim': 'var(--gutter-slim) 1fr 2fr var(--gutter-slim)',
       }
     },
   },

@@ -2,3 +2,11 @@
 title: Favorite haunts
 order: 2
 ---
+
+{% for brewery in collections.breweries %}
+  {{brewery.data.name}}
+{% endfor %}
+<hr/>
+{% for shop in collections.shops %}
+  {{shop.data.name}}
+{% endfor %}
