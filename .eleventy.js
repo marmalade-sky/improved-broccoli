@@ -1,8 +1,10 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/assets/');
   eleventyConfig.addPassthroughCopy('./src/admin/');
+  eleventyConfig.addPassthroughCopy('./src/js/');
 
   eleventyConfig.addWatchTarget("./src/css/");
+  eleventyConfig.addWatchTarget("./src/js/");
 
   eleventyConfig.addGlobalData("svgSrc", "/assets/svg/");
   eleventyConfig.addGlobalData("imgSrc", "/assets/img/");

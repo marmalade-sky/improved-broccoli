@@ -19,7 +19,7 @@
       </p>
       {%- from 'macros/star-rating.njk' import rating %}
       {{ rating(review.data.rating) }} 
-      <p class="text-lg text-gray-200">
+      <p class="text-lg text-gray-200 line-clamp-5">
         {{review.data.description}}
       </p>
       <ul class="flex gap-5 text-xs text-gray-200">

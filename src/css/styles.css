@@ -28,13 +28,22 @@
     @apply content-[''] absolute w-full h-full bg-black opacity-30;
   }
 
-    /* Button style */
+  /* Button style */
 
-    .btn {
-      @apply inline-flex items-center gap-1 py-3 px-5 rounded text-xs font-bold uppercase tracking-widest bg-cyan-600 text-white;
-    }
-  
-    .btn:disabled {
-      @apply bg-slate-200 border-0 text-slate-500;
-    }
+  .btn {
+    @apply inline-flex items-center gap-1 py-3 px-5 rounded text-xs font-bold uppercase tracking-widest bg-cyan-600 text-white;
+  }
+
+  .btn:disabled {
+    @apply bg-slate-200 border-0 text-slate-500;
+  }
+}
+
+#NavTrigger:checked ~ #NavItems {
+  visibility: visible;
+  display: block;
+}
+
+#Site.openMenu {
+  overflow: hidden;
 }
