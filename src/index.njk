@@ -3,14 +3,14 @@ title: Liquid Love
 layout: layouts/base.njk
 ---
 {% include "partials/hero.njk" %}
-<div class="grid grid-cols-section bg-gray-100">
-  <div class="col-start-2 col-span-1 py-16">
+<div class="grid grid-cols-section-slim bg-gray-100 md:grid-cols-section">
+  <div class="col-start-2 col-span-1 py-10 md:py-16">
     {% include "areas/buy-again.njk" %}
   </div>
 </div>
-<div class="grid grid-cols-section bg-gray-200">
-  <div class="col-start-2 col-span-1 py-16">
-    <h2 class="text-5xl mb-12">Go•to favorite styles</h2>
+<div class="grid grid-cols-section-slim bg-gray-200 md:grid-cols-section">
+  <div class="col-start-2 col-span-1 py-10 md:py-16">
+    <h2 class="text-4xl mb-6 md:text-5xl md:mb-12">Go•to favorite styles</h2>
     {% include "areas/goto-styles.njk" %}
   </div>
 </div>

@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --gutter-slim: 3%;
+    --gutter-slim: 5%;
     --gutter: 9%;
     --gutter-wide: 20%;
     --heading-height: 120px;
@@ -24,6 +24,18 @@
 }
 
 @layer components {
+
+  /* Mobile navigation */
+  
+  #NavTrigger:checked ~ #NavItems {
+    visibility: visible;
+    display: block;
+  }
+  
+  #Site.openMenu {
+    overflow: hidden;
+  }
+
   .hero::before {
     @apply content-[''] absolute w-full h-full bg-black opacity-30;
   }
@@ -37,13 +49,4 @@
   .btn:disabled {
     @apply bg-slate-200 border-0 text-slate-500;
   }
-}
-
-#NavTrigger:checked ~ #NavItems {
-  visibility: visible;
-  display: block;
-}
-
-#Site.openMenu {
-  overflow: hidden;
 }

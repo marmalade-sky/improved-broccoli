@@ -4,14 +4,14 @@
       <img src="{{reviewImgSrc}}{{review.data.img}}" class="absolute top-0 left-1/2 -translate-x-1/2 max-w-none h-full" alt="" />
     </div>
     <div class="flex-1">
-      <h4 class="text-2xl">
+      <h4 class="text-2xl md:text-2xl">
         {{review.data.beer}}
       </h4>
       <p class="flex flex-col text-base text-gray-600 mb-1">
-        <span>
+        <span class="line-clamp-1">
           {{review.data.brewery}}
         </span>
-        <span>
+        <span class="line-clamp-1">
           {{review.data.breweryLocation}}
         </span>
       </p>
