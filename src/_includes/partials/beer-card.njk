@@ -1,4 +1,4 @@
-{% for review in collection %}
+{% for review in beerCollection %}
   <div class="bg-white shadow-md rounded overflow-hidden">
     <div class="h-48 overflow-hidden md:h-auto {{'bg-slate-300' if review.data.eyecatch.length == 0}}">
       <a href="{{review.url}}" class="{{'relative block' if review.data.eyecatch.length == 0}}">
@@ -6,7 +6,7 @@
           <img src="{{reviewImgSrc}}{{review.data.img}}" alt="Beer pictured: {{review.data.beer}}">
         {% else %}
           <img src="{{reviewImgSrc}}thumb-blank.png" alt="Beer pictured: {{review.data.beer}}">
-          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col align-center">
+          <div class="absolute top-0 left-1/2 -translate-x-1/2 flex flex-col align-center md:top-1/2 md:-translate-y-1/2">
             <img src="{{svgSrc}}beer-glasses.svg" class="h-36 mb-3">
             <p class=" text-slate-500 text-sm uppercase text-center">image coming soon!</p>
           </div>

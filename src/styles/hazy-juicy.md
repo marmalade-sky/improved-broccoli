@@ -1,6 +1,6 @@
 ---
 title: Hazy & Juicy
-gotoStyle: true 
+gotoStyle: false 
 type: 
   - hazy
   - juicy

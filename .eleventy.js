@@ -35,8 +35,8 @@ module.exports = function (eleventyConfig) {
     .filter(style => style.data.gotoStyle === true);
   });
 
-  eleventyConfig.addFilter('filterStyle', (item, beerGroups) => {
-    let review = [];
+  eleventyConfig.addFilter('filterStyle', (item, beerGroups, truncate) => {
+    let review = []
     for (i in item) {
       let beerStyles = item[i].data.style;
       for (style in beerStyles) {
@@ -49,7 +49,14 @@ module.exports = function (eleventyConfig) {
         }
       }
     };
-    return review;
+    if (truncate) {
+      return review
+        .sort((a, b) => {return b.date - a.date;})
+        .slice(0,3);  
+    } else {
+      return review
+        .sort((a, b) => {return b.date - a.date;})
+    }
   });
 
   return {

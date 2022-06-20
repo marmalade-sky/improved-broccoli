@@ -6,9 +6,9 @@
       <div class="bar"> </div>
   </div>
 </label>
-<ul id="NavItems" class="invisible opacity-0 fixed top-0 left-0 w-full h-full bg-slate-900 space-y-8 flex flex-col justify-center items-center md:visible md:opacity-100 md:relative md:flex-row md:justify-end md:gap-16 md:bg-transparent md:space-y-0">
+<ul id="NavItems" class="invisible opacity-0 fixed top-0 left-0 w-full h-full bg-gray-900 space-y-8 flex flex-col justify-center items-center md:visible md:opacity-100 md:relative md:flex-row md:justify-end md:gap-16 md:bg-transparent md:space-y-0">
   {% for item in collections.navigation %}
-    <li class="relative text-slate-200 text-2xl md:text-slate-800 md:text-base md:static">
+    <li class="relative text-slate-200 text-2xl md:text-slate-800 md:text-base" {{"aria-current=page" if page.url == item.url}}>
       <a href="{{item.url | url}}" class="relative lowercase">{{item.data.title}}</a>
     </li>
   {% endfor %}

@@ -1,4 +1,4 @@
-{% for review in collections.reviews | filterStyle(styleGroup) %}
+{% for review in styleReviewCollection | filterStyle(styleGroup, truncateBeers) %}
   <div class="flex items-stretch gap-6">
     <div class="relative w-28 h-28 overflow-hidden rounded shadow-md {{'bg-slate-300 if review.data.eyecatch == 0'}}">
       <a href="{{review.url}}" class="inline-block">
