@@ -1,22 +1,14 @@
 <input type="checkbox" hidden class="checkbox relative z-20" id="NavTrigger">
-<label for="NavTrigger" class="block justify-self-end md:hidden">
-    <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 justify-self-end">
-      <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M1.5 3C1.22386 3 1 3.22386 1 3.5C1 3.77614 1.22386 4 1.5 4H13.5C13.7761 4 14 3.77614 14 3.5C14 3.22386 13.7761 3 13.5 3H1.5ZM1 7.5C1 7.22386 1.22386 7 1.5 7H13.5C13.7761 7 14 7.22386 14 7.5C14 7.77614 13.7761 8 13.5 8H1.5C1.22386 8 1 7.77614 1 7.5ZM1 11.5C1 11.2239 1.22386 11 1.5 11H13.5C13.7761 11 14 11.2239 14 11.5C14 11.7761 13.7761 12 13.5 12H1.5C1.22386 12 1 11.7761 1 11.5Z"
-        fill="currentColor"
-      />
-    </svg>
+<label id="Menu" for="NavTrigger" class="block justify-self-end md:hidden">
+    <div id="Hamburger" class="hamburger">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"> </div>
+  </div>
 </label>
-<ul id="NavItems" class="invisible hidden fixed top-0 left-0 w-full h-full bg-slate-600 md:visible md:relative md:flex md:justify-end md:gap-16 md:bg-transparent">
-  <li class="absolute top-0 right-0 md:hidden">
-    <label for="NavTrigger">
-      Close Me
-    </label>
-  </li>
+<ul id="NavItems" class="invisible opacity-0 fixed top-0 left-0 w-full h-full bg-slate-900 space-y-8 flex flex-col justify-center items-center md:visible md:opacity-100 md:relative md:flex-row md:justify-end md:gap-16 md:bg-transparent md:space-y-0">
   {% for item in collections.navigation %}
-    <li>
+    <li class="relative text-slate-200 text-2xl md:text-slate-800 md:text-base md:static">
       <a href="{{item.url | url}}" class="relative lowercase">{{item.data.title}}</a>
     </li>
   {% endfor %}

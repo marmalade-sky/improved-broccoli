@@ -1,8 +1,16 @@
 {% for review in collection %}
   <div class="bg-white shadow-md rounded overflow-hidden">
-    <div class="h-48 overflow-hidden md:h-auto">
-      <a href="{{review.url}}">
-        <img src="{{reviewImgSrc}}{{review.data.img}}" alt="Beer pictured: {{review.data.title}}">
+    <div class="h-48 overflow-hidden md:h-auto {{'bg-slate-300' if review.data.eyecatch.length == 0}}">
+      <a href="{{review.url}}" class="{{'relative block' if review.data.eyecatch.length == 0}}">
+        {% if review.data.eyecatch.length > 0 %}
+          <img src="{{reviewImgSrc}}{{review.data.img}}" alt="Beer pictured: {{review.data.beer}}">
+        {% else %}
+          <img src="{{reviewImgSrc}}thumb-blank.png" alt="Beer pictured: {{review.data.beer}}">
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col align-center">
+            <img src="{{svgSrc}}beer-glasses.svg" class="h-36 mb-3">
+            <p class=" text-slate-500 text-sm uppercase text-center">image coming soon!</p>
+          </div>
+        {% endif %}
       </a>
     </div>
     <div class="p-6">

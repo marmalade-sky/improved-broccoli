@@ -1,8 +1,12 @@
 {% for review in collections.reviews | filterStyle(styleGroup) %}
-  <div class="flex items-center gap-6">
-    <div class="relative w-28 h-28 overflow-hidden rounded shadow-md ">
-      <a href="{{review.url}}">
-        <img src="{{reviewImgSrc}}{{review.data.img}}" class="absolute top-0 left-1/2 -translate-x-1/2 max-w-none h-full" alt="" />
+  <div class="flex items-stretch gap-6">
+    <div class="relative w-28 h-28 overflow-hidden rounded shadow-md {{'bg-slate-300 if review.data.eyecatch == 0'}}">
+      <a href="{{review.url}}" class="inline-block">
+        {% if review.data.eyecatch.length > 0 %}
+          <img src="{{reviewImgSrc}}{{review.data.img}}" class="absolute top-0 left-1/2 -translate-x-1/2 max-w-none h-full" alt="" />
+        {% else %}
+          <img src="{{svgSrc}}beer-glasses-no-bg.svg" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-none h-3/4">
+        {% endif %}
       </a>
     </div>
     <div class="flex-1">
