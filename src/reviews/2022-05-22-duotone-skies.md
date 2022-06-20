@@ -5,7 +5,6 @@ breweryLocation: Lake Zurich, IL
 rating: 9
 abv: 7.8%
 style:
-  - imperial IPA
   - New England
   - hazy
   - juicy

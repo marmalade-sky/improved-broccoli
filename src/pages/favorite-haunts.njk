@@ -3,10 +3,23 @@ title: Favorite haunts
 order: 2
 ---
 
-{% for brewery in collections.breweries %}
-  {{brewery.data.name}}
-{% endfor %}
-<hr/>
-{% for shop in collections.shops %}
-  {{shop.data.name}}
-{% endfor %}
+<div class="grid grid-cols-section-slim bg-gray-100 xl:grid-cols-section">
+  <div class="col-start-2 col-span-1 py-10 md:py-16">
+    <h2 class="text-4xl mb-6 md:text-5xl md:mb-12">Frequently visited taprooms</h2>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+      {% set localeType = brewery %}
+      {% set locationCollection = collections.breweries %}
+      {% include "partials/location-card.njk" %}
+    </div>
+  </div>
+</div>
+<div class="grid grid-cols-section-slim bg-gray-200 xl:grid-cols-section">
+  <div class="col-start-2 col-span-1 py-10 md:py-16">
+    <h2 class="text-4xl mb-6 md:text-5xl md:mb-12">Kick•ass bottle shops</h2>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+      {% set localeType = shop %}
+      {% set locationCollection = collections.shops %}
+      {% include "partials/location-card.njk" %}
+    </div>
+  </div>
+</div>

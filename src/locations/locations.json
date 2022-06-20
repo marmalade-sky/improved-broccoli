@@ -1,4 +1,5 @@
 {
   "layout": "layouts/location.njk",
-  "tags": "locations"
+  "tags": "locations",
+  "permalink": false
 }
