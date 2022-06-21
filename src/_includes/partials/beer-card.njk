@@ -2,7 +2,7 @@
   <div class="bg-white shadow-md rounded overflow-hidden">
     <div class="h-48 overflow-hidden md:h-auto {{'bg-slate-300' if review.data.eyecatch.length == 0}}">
       <a href="{{review.url}}" class="{{'relative block' if review.data.eyecatch.length == 0}}">
-        {% if review.data.eyecatch.length > 0 %}
+        {% if review.data.img.length > 0 %}
           <img src="{{reviewImgSrc}}{{review.data.img}}" alt="Beer pictured: {{review.data.beer}}">
         {% else %}
           <img src="{{reviewImgSrc}}thumb-blank.png" alt="Beer pictured: {{review.data.beer}}">
@@ -24,8 +24,8 @@
           <span>{{review.data.brewery}}</span>
           <span>{{review.data.breweryLocation}}</span>
         </p>
-        {%- from 'macros/star-rating.njk' import rating %}
-        {{ rating(review.data.rating) }} 
+        {%- from 'macros/star-rating.njk' import starRating %}
+        {{ starRating(review.data.rating) }} 
         <p class="text-lg line-clamp-3">
           {{review.data.description}}
         </p>

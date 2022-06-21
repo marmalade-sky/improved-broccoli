@@ -17,8 +17,8 @@
         <span>{{review.data.brewery}}</span> - 
         <span>{{review.data.breweryLocation}}</span>
       </p>
-      {%- from 'macros/star-rating.njk' import rating %}
-      {{ rating(review.data.rating) }} 
+      {%- from 'macros/star-rating.njk' import starRating %}
+      {{ starRating(review.data.rating) }} 
       <p class="text-lg text-gray-200 line-clamp-5">
         {{review.data.description}}
       </p>

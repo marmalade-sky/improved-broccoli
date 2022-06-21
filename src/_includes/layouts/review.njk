@@ -1,3 +1,73 @@
 ---
 layout: layouts/base.njk
 ---
+
+<div class="grid grid-cols-section-slim bg-white xl:grid-cols-section">
+  <div class="col-start-2 col-span-1 py-10 md:py-16">
+    <div class="grid grid-cols-[1fr_2fr] gap-12">
+      <div class="col-start-1">
+        <img src="{{reviewImgSrc}}{{img}}" class="rounded shadow-md" alt="Beer pictured{{title}}">
+      </div>
+      <div class="col-start-2 space-y-6">
+        <div class="space-y-2">
+          <h1 class="text-4xl md:text-5xl">
+            {{beer}}
+          </h1>
+          <ul class="flex text-base text-gray-600 gap-6">
+            <li>
+              {{brewery}}
+            </li> 
+            <li class="list-disc">
+              {{breweryLocation}}
+            </li>
+          </ul>
+          {%- from 'macros/star-rating.njk' import starRating %}
+          {{ starRating(rating) }} 
+          <ul class="flex text-base text-gray-600 gap-6">
+            <li>
+              <label class="font-bold">ABV:</label>
+              <span>{{abv}}</span>
+            </li>
+            {% if hops.length > 0 %}
+              <li>
+                <label class="font-bold">Hops:</label>
+                <ul class="comma-separated inline-block">
+                {% for item in hops %}
+                  <li>{{item | title }}</li>
+                {% endfor %}
+                </ul>
+              </li>
+            {% endif %} 
+            <li>
+              <label class="font-bold">Style:</label>
+              <ul class="comma-separated inline-block">
+              {% for item in style %}
+                <li>{{item | title}}</li>
+              {% endfor %}
+              </ul>
+            </li>
+          </ul>
+          <p class="text-base">
+            {{description}}
+          </p>
+        </div>
+        <hr /> 
+        <div class="space-y-2">
+          <label class="font-bold">This gal's thoughts:</label>
+          {{content | safe}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="grid grid-cols-section-slim bg-gray-100 xl:grid-cols-section">
+  <div class="col-start-2 col-span-1 py-10 md:py-16">
+    <h2 class="text-4xl mb-6 md:text-5xl">Sorta similar beers</h2>
+    {% set styleGroup = style %}
+    {% set beerReviewed = beer %}
+    {% set styleReviewCollection = collections.reviews %}
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {% include "partials/beer-snippet.njk" %}
+    </div>
+  </div>
+</div>
