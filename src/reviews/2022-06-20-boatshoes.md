@@ -10,4 +10,7 @@ description: With a moderate amount of bitterness and a crisp dry finish, this l
 img: 'thumb-boatshoes.jpg'
 eyecatch: 'eyecatch-boatshoes.jpg'
 ---
-Adipiscing elit duis tristique sollicitudin nibh sit. Augue interdum velit euismod in pellentesque massa placerat duis. Consectetur adipiscing elit duis tristique sollicitudin nibh. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. In tellus integer feugiat scelerisque varius morbi enim. Ac turpis egestas sed tempus. Tempor orci eu lobortis elementum nibh tellus. Gravida cum sociis natoque penatibus et magnis dis parturient. Pretium fusce id velit ut tortor pretium. Dignissim suspendisse in est ante in nibh mauris. Arcu non sodales neque sodales ut etiam.
+
+I drank my first can of Boat Shoes during the terrible Chicago heatwave in June of 2022. Remember that day? It was 99 degrees with 80% humidity because of that Sunday night storm that had eerie tornado sirens blaring for over an hour. I wasn't going to turn on the oven to cook dinner in an apartment with no A/C, so I do what I always do when this happens: I make a cheese plate and charcuterie board.
+ 
+Poured into a traditional pint glass because I was too hot to care, it was like clear, liquid gold. There was a sudsy head that quickly dissipated. Crisp, light, slightly dry, and most importantly, COLD, this malt-forward beer had some slight citrus taste to it as well. I hope that wasn't a hallucination. I also realize the heat may have made this review pretty skewed, but it did satisfy on one of the worst-weather days of 2022 thus far.

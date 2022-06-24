@@ -33,7 +33,7 @@
         <ul class="flex gap-5 text-sm text-gray-600">
           {% for item in review.data.style %}
             <li>
-              #{{item}}
+              #{{item | lower}}
             </li>
           {% endfor %}
         </ul>

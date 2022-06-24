@@ -37,7 +37,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addCollection('highRated', function (collection) {
     return collection.getFilteredByGlob('./src/reviews/*.md')
-    .filter(review => review.data.rating > 8)
+    .filter(review => review.data.rating > 7)
     .sort((a, b) => {return b.date - a.date;});
   });
 

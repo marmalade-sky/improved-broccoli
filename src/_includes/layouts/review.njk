@@ -4,16 +4,16 @@ layout: layouts/base.njk
 
 <div class="grid grid-cols-section-slim bg-white xl:grid-cols-section">
   <div class="col-start-2 col-span-1 py-10 md:py-16">
-    <div class="grid grid-cols-[1fr_2fr] gap-12">
+    <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 xl:grid-cols-[1fr_2fr]">
       <div class="col-start-1">
-        <img src="{{reviewImgSrc}}{{img}}" class="rounded shadow-md" alt="Beer pictured{{title}}">
+        <img src="{{reviewImgSrc}}{{img}}" class="w-full rounded shadow-md" alt="Beer pictured: {{title}}">
       </div>
-      <div class="col-start-2 space-y-6">
+      <div class="col-start-1 space-y-6 lg:col-start-2">
         <div class="space-y-2">
           <h1 class="text-4xl md:text-5xl">
             {{beer}}
           </h1>
-          <ul class="flex text-base text-gray-600 gap-6">
+          <ul class="flex text-gray-600 gap-6">
             <li>
               {{brewery}}
             </li> 
@@ -23,7 +23,7 @@ layout: layouts/base.njk
           </ul>
           {%- from 'macros/star-rating.njk' import starRating %}
           {{ starRating(rating) }} 
-          <ul class="flex text-base text-gray-600 gap-6">
+          <ul class="flex flex-col text-gray-600 md:gap-6 md:flex-row">
             <li>
               <label class="font-bold">ABV:</label>
               <span>{{abv}}</span>
@@ -33,7 +33,7 @@ layout: layouts/base.njk
                 <label class="font-bold">Hops:</label>
                 <ul class="comma-separated inline-block">
                 {% for item in hops %}
-                  <li>{{item | title }}</li>
+                  <li>{{item | lower}}</li>
                 {% endfor %}
                 </ul>
               </li>
@@ -42,17 +42,17 @@ layout: layouts/base.njk
               <label class="font-bold">Style:</label>
               <ul class="comma-separated inline-block">
               {% for item in style %}
-                <li>{{item | title}}</li>
+                <li>{{item | lower}}</li>
               {% endfor %}
               </ul>
             </li>
           </ul>
-          <p class="text-base">
+          <p class="text-lg lg:text-base">
             {{description}}
           </p>
         </div>
         <hr /> 
-        <div class="space-y-2">
+        <div class="text-lg space-y-3 md:space-y-2 lg:text-base ">
           <label class="font-bold">This gal's thoughts:</label>
           {{content | safe}}
         </div>

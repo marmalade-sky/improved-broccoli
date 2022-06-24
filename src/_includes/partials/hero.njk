@@ -8,24 +8,24 @@
             <path d="M293.5,20.67c-75.95-56.48-123.01,19.12-130.99,33.46-7.99-14.33-55.04-89.93-131-33.46C6.16,39.52-34.96,122.15,56.52,197.91c21.97,18.19,67.64,49.89,91.47,73.72,4.84,4.56,9.47,9.79,13.7,15.68,.29,.4,.53,.81,.81,1.21,.28-.4,.53-.81,.81-1.21,4.24-5.9,8.88-11.14,13.73-15.71,23.84-23.83,69.48-55.51,91.44-73.69,91.48-75.75,50.36-158.39,25.01-177.24Z" class="fill-pink-500"/>
           </g>
         </svg>
-        <small class="text-xs text-gray-200 uppercase tracking-widest">Latest Love</small>
+        <small class="text-sm text-gray-200 uppercase tracking-widest lg:text-xs">Latest Love</small>
       </div>
-      <h1 class="text-5xl text-gray-200 md:text-6xl">
+      <h1 class="text-6xl text-gray-200">
         {{review.data.beer}}
       </h1>
-      <p class="text-base text-gray-200">
+      <p class="text-lg text-gray-200 lg:text-base">
         <span>{{review.data.brewery}}</span> - 
         <span>{{review.data.breweryLocation}}</span>
       </p>
       {%- from 'macros/star-rating.njk' import starRating %}
       {{ starRating(review.data.rating) }} 
-      <p class="text-lg text-gray-200 line-clamp-5">
+      <p class="text-xl text-gray-200 line-clamp-5 lg:text-lg">
         {{review.data.description}}
       </p>
-      <ul class="flex gap-5 text-xs text-gray-200">
+      <ul class="flex gap-5 text-base text-gray-200 lg:text-sm">
         {% for style in review.data.style %}
           <li>
-            #{{style}}
+            #{{style | lower}}
           </li>
         {% endfor %}
       </ul>

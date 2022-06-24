@@ -10,8 +10,16 @@
     --heading-height: 120px;
   }
 
+  html, body {
+    @apply min-h-screen
+  }
+
   body {
-    @apply font-primary leading-6;
+    @apply flex flex-col font-primary leading-6;
+  }
+
+  #Main {
+    @apply flex-1
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -56,7 +64,7 @@
   }
 
   #NavTrigger:checked ~ #NavItems > li:nth-child(3n + 2)::before {
-    @apply -rotate-3 bg-orange-700
+    @apply -rotate-3 bg-cyan-700
   }
 
   #NavTrigger:checked ~ #NavItems > li:nth-child(3n + 3)::before {
@@ -116,12 +124,12 @@
 
   #NavItems > li:nth-child(3n + 1):hover::before,
   #NavItems > li[aria-current="page"]:nth-child(3n + 1)::before {
-    @apply bg-amber-300
+    @apply bg-yellow-400
   }
 
   #NavItems > li:nth-child(3n + 2):hover::before,
   #NavItems > li[aria-current="page"]:nth-child(3n + 2)::before {
-    @apply -rotate-2 bg-orange-300
+    @apply -rotate-2 bg-cyan-500
   }
 
   #NavItems > li:nth-child(3n + 3):hover::before,
@@ -138,11 +146,15 @@
   /* Button style */
 
   .btn {
-    @apply inline-flex items-center gap-1 py-3 px-5 rounded text-xs font-bold uppercase tracking-widest bg-cyan-600 text-white;
+    @apply inline-flex items-center gap-1 py-2 px-4 rounded text-xs font-bold uppercase tracking-widest bg-orange-500 border-orange-500 text-white border-4;
+  }
+
+  .btn:focus {
+    @apply border-orange-300 ring-inset;
   }
 
   .btn:disabled {
-    @apply bg-slate-200 border-0 text-slate-500;
+    @apply bg-slate-400 border-0 text-slate-500;
   }
 }
 
