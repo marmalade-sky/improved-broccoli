@@ -10,6 +10,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addGlobalData("svgSrc", "/assets/svg/");
   eleventyConfig.addGlobalData("imgSrc", "/assets/img/");
+  eleventyConfig.addGlobalData("faviconSrc", "/assets/img/favicons/");
   eleventyConfig.addGlobalData("reviewImgSrc", "/assets/img/reviews/");
   eleventyConfig.addGlobalData("localeImgSrc", "/assets/img/locations/");
 

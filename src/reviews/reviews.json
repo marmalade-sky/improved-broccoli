@@ -1,4 +1,5 @@
 {
   "layout": "layouts/review.njk",
-  "tags": "reviews"
+  "tags": "reviews",
+  "permalink": "/{{ page.filePathStem }}.html"
 }
