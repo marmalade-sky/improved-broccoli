@@ -106,11 +106,11 @@
     animation: rotateL 1.5s cubic-bezier(.5, .2, .2, 1);
   }
 
-  @keyframes(rotateR){
+  @keyframes rotateR {
     from {transform: translateY(0px) rotate(0);}
     to{transform: translateY(8px) rotate(45deg);}
   }
-  @keyframes(rotateL){
+  @keyframes rotateL {
     from{transform: translateY(0px) rotate(0);}
     to{transform: translateY(-8px) rotate(-45deg);}
   }
