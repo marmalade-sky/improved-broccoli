@@ -15,7 +15,7 @@
   }
 
   body {
-    @apply flex flex-col font-primary leading-6;
+    @apply flex text-gray-900 flex-col font-primary leading-6;
   }
 
   #Main {
