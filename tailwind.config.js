@@ -19,9 +19,5 @@ module.exports = {
         'nav-slim': 'var(--gutter-slim) 1fr 2fr var(--gutter-slim)',
       }
     },
-  },
-  plugins: [
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/line-clamp'),
-  ],
+  }
 }
