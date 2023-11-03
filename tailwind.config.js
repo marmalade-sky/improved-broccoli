@@ -1,5 +1,8 @@
+const { preset } = require('./preset');
+
 module.exports = {
   content: ['./src/**/*.{njk,md}'],
+  presets: [preset],
   theme: {
     fontFamily: {
       'primary': ['Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif'],
