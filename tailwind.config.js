@@ -1,7 +1,10 @@
-const { preset } = require('./preset');
+const { preset } = require("./preset");
 
 module.exports = {
   content: ['./src/**/*.{njk,md}'],
+  // presets: [
+  //   require('./preset.js')
+  // ],
   presets: [preset],
   theme: {
     fontFamily: {
